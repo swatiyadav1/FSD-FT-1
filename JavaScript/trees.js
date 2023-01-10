@@ -30,6 +30,7 @@ function BST(){
     this.inorder = inorder;
     this.getMax = getMax;
     this.getMin = getMin;
+    this.find = find;
 }
 function insert(data){
 var n = new Node(data,null,null);
@@ -111,6 +112,63 @@ function getMax(){
     }
     return current.data;
 }
+//for searching a particular value
+function find(data){
+var current = this.root;
+while(current.data != data){
+    if(data <current.data){
+        current = current.left;
+    }
+    else{
+        current = current.right;
+    }
+    if(current == null){
+        return null;
+    }
+}
+return current;
+}
+
+function remove(data){
+    root = removeNode(this.root,data);
+}
+function removeNode(node,data){
+    if(node == null){
+        return null;
+    }
+    if(data == node.data){
+        //node has no children
+        if(node.left == null && node.right == null){
+            return null;
+        }
+        //node has no left child
+        if(node.left == null){
+            return node.right;
+
+        }
+        //node has no right child
+        if(node.right == null){
+            return node.left;
+            
+        }
+
+        //node has two children
+        var tempNode = getMin(node.right);
+        node.data = tempNode.data;
+        node.right = removeNode(node.right,tempNode.data);
+        return node;
+    }
+    else if(data<node.data){
+        node.left = removeNode(node.left,data);
+        return node;
+
+    }
+    else{
+        node.right = removeNode(node.right,data);
+        return node;
+    }
+}
+
 var b = new BST();
 b.insert(23);
 b.insert(45);
@@ -132,3 +190,32 @@ console.log("minimum value is  - "+min);
 
 var max= b.getMax();
 console.log("maximum value is  - "+max);
+var value = 68;
+var f  = b.find(value);
+if(f != null){
+    console.log("found "+value+ " in the bst");
+}
+else{
+console.log(value+ " not found");
+}
+
+/*remove node form BST 
+1- no childre of the node
+2-when there is one child
+3- when two children
+
+recursie
+
+remove()
+removeNode()
+
+1- check if the node is the one ypu want to delete
+2-else, compare the data
+3- if less than the current node,move to the left child and compare the data
+4- if data is greater than,move to the right child
+
+case 1 -  node removed to be is the leaf, parent node -> null
+case 2- has one child,link pointing to the node to be removed has to be adjusted to poiint to the removed node's child node
+case 3 ,  the node has two children,choose for the smallest value in the right subtree of the removed node
+
+*/
