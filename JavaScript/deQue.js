@@ -49,7 +49,7 @@ Deletion from front end
 //using circular queue
 let MAX=100;
 class Deque{
-  constructure(size){
+  constructur(size){
     this.arr=new Array(MAX);
     this.front=-1;
     this.rear=0;
