@@ -1,0 +1,14 @@
+a:link{
+    color:brown;
+    text-decoration: none;
+    border:2px dashed yellow;
+}
+a:visited{
+    color:rgb(150, 207, 28);
+}
+a:hover{
+    border:none;
+}
+a:active{
+    color:#00ffff;
+}

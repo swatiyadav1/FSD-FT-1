@@ -1,10 +1,49 @@
 body{
-    background:yellow;
-    font:18px Arial,sans-serif;
+    /* background:yellow; */
+
+    background-image: url("taj.jpeg");
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-size:24px;
+    font-weight: 800;
+    text-align: justify;
+ 
+/*
+em - refers to the font size of the parent elelemnt
+1em 
+rem - html 16px
+xx-large-32px
+large
+small
+larger
+smaller
+xx-small 9 px
+x-small
+medium - default size
+
+
+font-weight-  boldness
+
+100-900
+normal - 400
+700 - bold
+
+
+
+
+*/
 }
 p{
     color:brown;
     text-align:center;
+    text-decoration: overline;
+    text-transform: lowercase;
+    letter-spacing: 10px;
+    line-height: 1.2;
 }
 #mypara{
     color:blue;
@@ -29,13 +68,13 @@ ul>li ol{
     list-style: none;
 }
 h1+p{
-    color:blue;
+    color:rgb(72, 175, 210);
 }
 ul.task+p{
     color:pink;
     text-indent:30px;
 }
-h1~p{
+/* h1~p{
     color:red;
 }
 h1,h2,h3{
@@ -43,7 +82,7 @@ h1,h2,h3{
 }
 h1{
     font-weight:normal;
-}
+} */
 /* 
 
 write your comments 
@@ -61,4 +100,13 @@ e1+e2
 general sibling selector
 ~
 E1 ~ E2
+
+hexadecimal -
+
+6 digit, #, rr,gg,bb
+00 - FF
+0 -255
+
+#ffffff
+#000000
 */
