@@ -19,6 +19,20 @@ Hello HTML
 
                 
             }
+            .city{
+                background-color: red;
+                color:white;
+                border:2px solid black;
+                padding:20px;
+            }
+            .country{
+                text-align: center;
+            }
+            #myHead1{
+                background-color: bisque;
+                color:red;
+                padding:30px;
+            }
         </style>
     </head>
     <body>
@@ -64,7 +78,55 @@ Hello HTML
         alert("Hello to HTML Tutorial");
     }
 </script>
-        <h1 style="font-size:50px;"> 
+
+
+ <p>this is <span style="color:aqua;">swati yadav<span></p>
+
+    <div style="background-color:yellow;color:blue;padding:20px;">
+        <h2>
+My Introduction
+        </h2>
+        <p>
+My name is Swati Yadav
+        </p>
+    </div>
+
+    <div class="city country">
+<h2>
+Paris
+</h2>   
+<p>Paris is the capital of france</p>     
+    </div>
+
+    
+    <div class="city">
+<h2>
+Delhi
+</h2>   
+<p>Delhi is the capital of India</p>     
+    </div>
+    
+    <div class="city">
+<h2>
+London
+</h2>   
+<p>London is the capital of England</p>     
+    </div>
+
+
+    <!--Id attribute-->
+
+    <h1 id="myHead1">My Header 1</h1>
+
+
+    <button onclick="changeText()">change</button>
+
+    <script>
+        function changeText(){
+            document.getElementById("myHead1").innerHTML="changed text came up";
+        }
+    </script>
+        <h1 id="myHead1" style="font-size:50px;"> 
             This is heading 1
         </h1>
         <h2>
@@ -254,4 +316,20 @@ spcaing - spAce between each edge
 inline
 internal
 external
+
+
+HTML Block and Inline elements
+
+
+block and inline
+
+<p>
+
+    <div>
+
+
+        <span>
+
+
+            <p>this is <span>swati yadav<span></p>
 -->

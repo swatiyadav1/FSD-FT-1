@@ -1,0 +1,64 @@
+body{
+    background:yellow;
+    font:18px Arial,sans-serif;
+}
+p{
+    color:brown;
+    text-align:center;
+}
+#mypara{
+    color:blue;
+}
+.paraclass{
+    text-align: left;
+}
+ul.menu {
+    list-style: none;
+}
+ul.menu li{
+    display:inline;
+}
+ul.menu li a{
+    margin:15px;
+   text-decoration: none;
+}
+ul>li {
+    list-style: square;
+}
+ul>li ol{
+    list-style: none;
+}
+h1+p{
+    color:blue;
+}
+ul.task+p{
+    color:pink;
+    text-indent:30px;
+}
+h1~p{
+    color:red;
+}
+h1,h2,h3{
+    color:blueviolet;
+}
+h1{
+    font-weight:normal;
+}
+/* 
+
+write your comments 
+property names they are not case sesnisitive
+but selectors are case sensitive
+
+CSS Selectors
+
+pattern 
+
+descendant selector
+child selectors
+adjacent sibling selector
+e1+e2
+general sibling selector
+~
+E1 ~ E2
+*/
