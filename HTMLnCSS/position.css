@@ -1,0 +1,38 @@
+body{
+    margin:100px auto;
+}
+.parent{
+    width:500px;
+    border:1px solid red;
+    margin:auto;
+    text-align: center;
+    position:relative;
+}
+.child{
+    border-radius: 10%;
+    width:100px;
+    height:100px;
+    margin:20px;
+}
+.one{
+    background-color: aquamarine;
+    position:absolute;
+    top:50px;
+    left:10px;
+  
+}
+.two{
+    background-color: rgb(11, 2, 143);
+    position:relative;
+    bottom:100px;
+}
+.three{
+    background-color: rgb(22, 181, 38);
+}
+.four{
+    background-color: rgb(158, 83, 18);
+}
+.five{
+    background-color: rgb(130, 27, 136);
+}
+
