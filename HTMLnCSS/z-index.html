@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        html{
+            box-sizing:border-box;
+
+        }
+        body{
+            margin:0;
+            padding:0;
+            position:relative;
+            background-color: #dfdfdf;
+            color:black;
+            line-height: 1.5;
+        }
+        .img-top,.img-bottom{
+width:120px;
+height:120px;
+background-image: url('th.jpeg');
+background-size: cover;
+background-position:center;
+        }
+        .content-mid{
+            position:relative;
+            z-index: 2;
+        }
+        .img-top{
+margin-bottom: -100px;
+position:relative;
+z-index:1;
+        }
+        .img-bottom{
+            margin-top: 100px;
+
+        }
+        .container{
+            position:fixed;
+            width:400px;
+            height:400px;
+            border:2px
+        }
+        #blue{
+            background-color: blue;
+            position:relative;
+            width:200px;
+            height:300px;
+            z-index:2;
+           
+        }
+        #red{
+            background-color:red;
+            position:relative;
+            width:200px;
+            height:300px;
+            bottom:80px;
+            left:100px;
+            z-index:4;
+         
+        }
+        #green{
+            background-color: green;
+            position:relative;
+            width:200px;
+            height:300px;
+            bottom:300px;
+            z-index:3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="blue">A</div>
+        <div class="box" id="red">B</div>
+        <div class="box" id="green">C</div>
+
+    </div>
+
+    <!-- <section class="content">
+        <div class="img-top"></div>
+        <div class="content-mid">dsfdf sdf dsf ds f ds g fd g dgdf gfdgdfg df g fd gd fg d fg df gfdgdfgdfgdfdg
+            dfg df g dfg df g df g dfg df g df gd fg df g dg
+            dfg dfg d fg df g dfg df g df gfdgdfg dfg fd fg d fg df gfd gd 
+             fdg fd g df g fdg
+             d fg dg  fd gfd g df g df g fdg fd g fd g fdg
+              dfg d fg df g dfg d fg fdg 
+        </div>
+        <div class="img-bottom"></div>
+    </section> -->
+
+  
+    
+</body>
+</html>
+
+<!--
+    z-index
+    order of overlapping html elements
+
+    elelments which have a higher index will be at the top of elelmnets with lower index
+
+
+    posiotions - absolute
+    relative
+    fixed
+
+
+    z-index:auto;
+
+    integer values
+     inherit
+     initial
+     unset
+-->
