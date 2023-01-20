@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*by default */
+      body{
+        background-color:pink;
+        color:red;
+      }
+      p{border:2px solid brown;}
+.navbar{
+    overflow:hidden;
+    background-color: bisque;
+}
+.navbar a{
+    float:left;
+    text-align: center;
+    padding:16px 16px;
+    text-decoration: none;
+    display:block;
+    color:brown;
+}
+.navbar a:hover{
+    background-color: aquamarine;
+    color:purple;
+}
+      /*screen is 800px and less , change bg color to red and text white*/
+      @media (min-width:550px) and (max-width:800px){
+        body{
+            background-color: red;
+            color:white;
+        }
+        .navbar a{
+            float:none;
+            width:100%;
+        }
+        
+
+        
+        
+      }
+      @media screen and (max-width:500px){
+        body{
+            background-color:purple;
+            color:white;
+        }
+        
+      }
+    </style>
+</head>
+<body>
+    <h1> Decrease or increase the screen size </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt aspernatur autem quidem incidunt iusto voluptas expedita fuga obcaecati necessitatibus? Quidem ratione minima porro! Sint necessitatibus accusamus inventore vitae possimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magni velit voluptates, fugiat dolores quam aut repudiandae animi laboriosam omnis alias laudantium temporibus ducimus, repellat sequi debitis pariatur autem hic?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquam temporibus, officia facilis id voluptates? Perspiciatis, labore, sint nemo ipsum fugit maxime animi corporis possimus vel earum recusandae at itaque?</p>
+    
+
+    <h1> navbar styling</h1>
+    <div class="navbar">
+        <a href="#">HOME</a>
+        <a href="#">HOME</a>
+        <a href="#">HOME</a>
+        <a href="#">HOME</a>
+        <a href="#">HOME</a>
+        <a href="#">HOME</a>
+
+    </div></body>
+</html>
+
+<!--
+    @media
+
+    mobile first 
+
+    used to check the height and width of a viewport
+    h and w of deevice
+    portrait mode / landscape
+      @media mediatype and (expression){
+            //css properties
+        }
+
+        @media screen (min-width:550px)and(max-width:800px)
+-->
