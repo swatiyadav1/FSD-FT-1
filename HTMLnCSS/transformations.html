@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transformations</title>
+    <style>
+        div{
+            width:100px;
+            height:150px;
+            border-radius:10px;
+            position:absolute;
+            color:black;
+            text-align: center;
+        }
+        #div-1{
+            background-color:red;
+position:relative;
+top:200px;
+left:100px;
+            transform:scaleY(0.5);
+        }
+        #div-2{
+            background-color:pink;
+            transform:translateY(100px);
+        }
+        #div-3{
+            background-color: rgb(179, 124, 198);
+            position:relative;
+top:250px;
+left:200px;
+transform:translate(20px) rotate(0.75turn);
+
+
+
+        }
+        #div-4{
+           
+            background-color: rgb(67, 11, 86);
+            position:relative;
+            top:250px;
+            left:400px;
+            transform:skew(45deg,-15deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="div-1">original</div>
+    <div id="div-2">transformed</div>
+    <div id="div-3">rotate</div>
+    <div id="div-4">skew-slant</div>
+</body>
+</html>
+<!--
+    positions
+    shapes
+
+    css - 
+    change the shape,posiiton and orientation of elelments
+    values - functions
+
+
+    transform : value(arguments);
+    2-d transformations
+    translate()-translate,moves up , down,left,right
+translateX()
+translate(Y)
+
+    1 div - increase its width
+    2 div - increase its height
+
+
+    scale()
+    -scaleX
+    scaleY
+
+    rotate() - deg, radians,turns
+
+
+    perspective();
+
+    z-depth;
+-->
