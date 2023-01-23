@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations in CSS</title>
+    <style>
+     /*   div{width:100px;
+        height:100px;
+    background-color:pink;
+animation-name:divExample;
+animation-duration: 4s;
+animation-delay:3s;
+animation-iteration-count: infinite;
+animation-direction:alternate-reverse;
+}
+@keyframes divExample {
+    0% {background-color: pink;}
+    20% {background-color: red;}
+    50% {background-color: rgb(127, 18, 118);}
+    75% {background-color: rgb(30, 159, 69);}
+}
+*/
+
+div{
+    width:100px;
+    height:50px;
+    background-color:red;
+    position:relative;
+animation:divexample 5s infinite;
+}
+
+#div1{animation-timing-function: linear;}
+#div2{animation-timing-function: ease;}
+#div3{animation-timing-function: ease-in;}
+#div4{animation-timing-function: ease-out;}
+#div5{animation-timing-function: ease-in-out;}
+
+
+@keyframes divexample {
+    from {left:0px;}
+    to {left:300px;}
+}
+
+    </style>
+</head>
+<body>
+    <h2>ANimations in CSS</h2>
+    <div id="div1">
+        linear
+    </div>
+    <div id="div2">
+        ease
+    </div>
+    <div id="div3">
+        ease-in
+    </div>
+    <div id="div4">
+        ease-out
+    </div>
+    <div id="div5">
+        ease-in-out
+    </div>
+    <p>this ia an example of animation</p>
+</body>
+</html>
+
+<!-- AANimation - change, move,slide,transformation 
+one style to another style 
+keyframess - what style will an element hold during ac retain time
+
+@keyframes  
+
+
+animation-timing-function property
+specifies the speed curve of the animation
+
+
+
+-->
