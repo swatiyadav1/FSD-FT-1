@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids Example</title>
+    <style>
+        .grid-container{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: minmax(100px,auto);
+            gap:10px;
+            background-color:yellow;
+           
+        }
+        .grid-item{
+            background-color: aqua;
+            border:3px dashed orange;
+        }
+        .one{
+            grid-column:1/3;
+            grid-row:1;
+        }
+        .two{
+            grid-column:2/4;
+            grid-row: 1/3;
+        }
+        .three{
+            grid-column: 1;
+            grid-row:2/5;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item one">One</div>
+        <div class="grid-item two">Two</div>
+        <div class="grid-item three">Three</div>
+        <div class="grid-item four">Four</div>
+        <div class="grid-item five">Five</div>
+        <div class="grid-item six">Six</div>
+    </div>
+</body>
+</html>
