@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+</head>
+<style>
+    .breadcrumb-item + .breadcrumb-item::before{
+        content:">";
+    }
+</style>
+<body>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+<a href="#">FSD</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">FSD</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">FSD</a>
+                                            </li>
+        </ol>
+    </nav>
+    <nav>
+        <ul class="pagination pagination-sm">
+
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li> 
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+
+        </ul>
+    </nav>
+    <nav>
+        <ul class="pagination pagination-lg">
+
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li> 
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+
+        </ul>
+    </nav>
+    <nav>
+        <ul class="pagination justify-content-end">
+
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li> 
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+
+        </ul>
+    </nav>
+    <div class="progress" style="height:20px;width:200px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" style="min-width:10px;">
+            50%
+        </div>
+    </div>
+    <script>
+        var i=0;
+        function progressMove(){
+            if(i<100){
+                i=i+1;
+                $(".progress-bar").css("width",i+"%").text(i+"%");
+            }
+
+            setTimeout("progressMove()",100);
+        }
+        progressMove();
+    </script>
+    
+</body>
+</html>
