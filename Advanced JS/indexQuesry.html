@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <p class="ex1">I am a para 1</p>
+    <p class="ex2">I am a para 2</p>
+
+<h2 class="ex1">this is heading</h2>
+    <p id="demo2">I am a para 3</p>
+    <p class="ex2">I am a para 4</p>
+
+
+
+    <p class="ex4">This is a para for quesry selctor All</p>
+    <p class="ex4">This is a para for quesry selctor All</p>
+    <p class="ex4">This is a para for quesry selctor All</p>
+    <div class="me">Swati</div>
+    <div class="me">Swati mam</div>
+    <button onclick="haveclicked()">changed now ...</button>
+    
+   
+
+    <script>
+        document.querySelector("h2.ex1").style.backgroundColor="yellow";
+        document.querySelector("#demo2").innerHTML="hello hi";
+
+
+        const n = document.querySelectorAll(".ex4");
+
+
+       
+
+        for(let  i =0;i<n.length;i++){
+            n[i].style.backgroundColor="pink";
+            n[i].style.color="red";
+        }
+        
+
+        const n1 = document.querySelectorAll("p.ex2");
+
+
+        n1[0].style.color="purple";
+
+
+        function haveclicked(){
+            var c= document.getElementsByClassName('me');
+            c[1].innerHTML="helo hi";
+            }
+    </script>
+</body>
+</html>
+
+<!--
+    Query Selector
+    eleemnt interface
+    allows you to select the first ellemnt thta matches one or more css selectors
+
+-->
