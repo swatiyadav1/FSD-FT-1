@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM</title>
+</head>
+<body>
+    <p id="msg"> HELLO HTML</p>
+     <p id="msg1"> HELLO HTML</p>
+      <p id="msg2"> HELLO HTML</p>
+      <button onclick="changeText()">Change Text P3 msg2</button>
+      <p>Please rate the service - </p>
+
+      <!-- <p>
+        <label for="v-poor">
+            <input type="radio" name="rate" value="very poor" id="very-poor">
+            Very Poor
+        </label>
+         <label for="poor">
+            <input type="radio" name="rate" value="poor" id="poor">
+            Poor
+        </label>
+         <label for="good">
+            <input type="radio" name="rate" value="good" id="good">
+            good
+        </label>
+      </p> -->
+
+
+      <p>candidate 1 -<input name="fname" type="text" value="Swati"></p>
+      <p> candidate 2 -<input name="fname" type="text" value="Arya"></p>
+      <p id="demo"></p>
+
+<p>A list for tagnames</p>
+<ul>
+    <li>
+        ABC
+    </li>
+    <li>
+        ABCDEF
+    </li>
+    <li>
+        ABCFER
+    </li>
+    <li>
+        ABCCDE
+    </li>
+</ul>
+
+
+<p id="demo1"></p>
+
+<div class="ex1">Elemenet 1</div>
+<div class="ex1">Element 2</div>
+
+
+
+
+<!-- <div class="me">Swati</div>
+<div class="we">Swati mam</div>
+<button onclick="haveclicked()">changed now ...</button> -->
+
+
+
+
+      <script>
+        const q =document.getElementById('msg');
+        console.log(q);
+        const p =document.getElementById('msg1').innerText;
+        console.log(p);
+function changeText(){
+    document.getElementById('msg2').innerHTML="Hello JS Dom";
+    var x = document.getElementById('msg2');
+    x.style.color="yellow";
+}
+        
+
+let e = document.getElementsByName("fname");
+document.getElementById("demo").innerHTML=e[0].tagName;
+
+let n = document.getElementsByName("fname").length;
+console.log(n);
+
+
+const listItems = document.getElementsByTagName("li");
+document.getElementById("demo1").innerHTML=listItems[2].innerHTML;
+
+document.getElementsByTagName("li")[2].innerHTML="this is yin yan";
+
+
+const collClass = document.getElementsByClassName("ex1");
+
+collClass[1].innerHTML="hello hi";
+
+
+
+
+
+
+
+      </script>
+
+</body>
+</html>
+
+<!--document.getEleemntById()
+
+    getElementsByName()
+
+
+    getElementsByTagName
+
+    getElementsByClassName()
+
+const k =document.getElementById('msg2').innerHTML="Hello JS Dom";
+        console.log(k);
+
+no elelmemt as specified by the id - null
+
+-->
