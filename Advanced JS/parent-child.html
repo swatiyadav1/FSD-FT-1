@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul-list">
+        <li>
+            HOME
+        </li>
+        <li>
+            Products
+        </li>
+        <li class="custome-item">Customer Care</li>
+        <li>
+            Careers
+        </li>
+        <li>
+            Investors
+        </li>
+        <li>
+            News
+        </li>
+        <li>About us</li>
+        
+    </ul>
+
+    <button id="btnSet">submit</button>
+    <script>
+        let n = document.querySelector('.custome-item');
+        console.log(n.parentNode);
+        let nxt = n.nextElementSibling;
+        let prv = n.previousElementSibling;
+        console.log(prv);
+
+        while(nxt){
+        
+        console.log(nxt);
+        nxt=nxt.nextElementSibling;
+        }
+
+        let c = document.getElementById("ul-list");
+        let fc = c.firstChild.nodeName;
+        console.log(fc);
+
+        console.log(c.firstElementChild);
+        
+        console.log(c.lastElementChild);
+
+        console.log(c.children);
+
+
+let btnSet  = document.querySelector("#btnSet");
+if(btnSet){
+    btnSet.setAttribute('name','send');
+    btnSet.setAttribute('disabled','');
+    let bGet = btnSet.getAttribute('name');
+console.log(bGet);
+
+btnSet.removeAttribute('disabled');
+
+console.log(btnSet.hasAttribute('name'));
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+<!--setAttribute - set a value for an attribute on a speciofird elelemnt
+
+    elelment.setAttribute(name,value)
+getAttribute-->

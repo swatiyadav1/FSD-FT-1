@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div onmouseover="mouseOvr(this)" onmouseout="mouseOt(this)" style="width:200px;height:30px;background-color:bisque;">
+    Mouse Over and out
+</div>
+
+<div onmousedown="mouseDn(this)" onmouseup="mouseUp(this)" style="margin-top:30px;width:200px;height:30px;background-color:bisque;">
+    Click Me
+</div>
+
+
+    <script>
+        function mouseOvr(obj){
+obj.innerHTML = "the mouse is over me";
+        }
+
+        function mouseOt(obj){
+            obj.innerHTML = "the mouse is not over me";
+        
+        }
+        function mouseDn(obj){
+            obj.innerHTML = "Relaese Up";
+                    }
+            
+                    function mouseUp(obj){
+                        obj.innerHTML = "Released";
+                    
+                    }
+    </script>
+</body>
+</html>
+
+<!--
+    mousedown
+    mouseup
+    click
+    dblclick
+    mousemove
+    mouseover
+    mouseout
+    mouseenter
+    mouseleave
+-->

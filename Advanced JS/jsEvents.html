@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSEvents</title>
+</head>
+<!--<body onload="console.log('loaded')"> -->
+
+    <body>
+    <button id="bttn">Click me!!</button>
+
+    <button id="btn" onclick="display()">Click me!!</button>
+    <button id="btn1">Click me!!</button>
+
+    <a href="https://www.unikaksha.com/">Take me to unikaksha site</a>
+
+    <h2>JavaScript Prompt Example</h2>
+
+<button onclick="myFunction()">Please Try for Prompt message</button>
+
+<p id="PromptExample"></p>
+
+<img id="logo" src="taj.jpeg" onload="console.log('logo loaded')">
+
+
+    <script>
+        addEventListener('DOMContentLoaded',(event) =>{
+            console.log('the dom is fully loaded');
+        });
+        addEventListener('load',(event) =>{
+            console.log('the page is fully loaded');
+        });
+       /* window.onload=(event) =>{
+            console.log('the page is fully loaded');
+        };
+        */
+        addEventListener('beforeunload',(event) =>{
+         event.preventDefault();
+         event.returnValue='';
+        });
+        addEventListener('unload',(event) =>{
+            console.log('unload');
+        });
+        function myFunction() {
+
+            let text;
+          
+            let user = prompt("Please enter your name:", "Your First Name");
+          
+            if (user == null || user == "") {
+          
+              text = "User cancelled the prompt.";
+          
+            } else {
+          
+              text = "Hello " + user + "! How are you?";
+          
+            }
+          
+            document.getElementById("PromptExample").innerHTML = text;
+          
+          }
+          
+        let btn=document.querySelector("#bttn");
+
+        document.getElementById('btn1').onclick=display;
+
+
+        function display(){
+alert("clicked the button");
+
+        }
+
+        btn.addEventListener('click',display);
+        btn.addEventListener('click',function(event){
+            console.log(event.type);
+        })
+
+        let link =document.querySelector('a');
+        link.addEventListener('click',function(e){
+            console.log('link was clicked');
+            e.preventDefault();
+        })
+addEventListener('DOMContentLoaded',(event) =>{
+    console.log('the dom is fully loaded');
+});
+addEventListener('load',(event) =>{
+    console.log('the page is fully loaded');
+});
+addEventListener('beforeunload',(event) =>{
+ event.preventDefault();
+ event
+});
+addEventListener('DOMContentLoaded',(event) =>{
+    console.log('the dom is fully loaded');
+});
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
+<!--
+    Event - 
+    actions
+
+preventDefault()
+    event handler - code
+    event listener
+
+
+    DOMCOntentLoaded
+    load
+    beforeunload
+    unload
+-->
