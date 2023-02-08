@@ -1,0 +1,92 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<title>JavaScript Form Demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<form action="signup.html" method="post" id="signup">
+				<h1>Sign Up</h1>
+				<div class="field">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" placeholder="Enter your fullname" />
+					<small></small>
+				</div>
+				<div class="field">
+					<label for="email">Email:</label>
+					<input type="text" id="email" name="email" placeholder="Enter your email address" />
+					<small></small>
+				</div>
+				<div class="field">
+					<label for="selectList">Frameworks</label>
+					<small></small>
+					<select id="selectList">
+						<option value="Angular">Angular</option>
+						<option value="Vue">Vue</option>
+						<option value="React">React</option>
+			
+						  <option value="Ember">Ember</option>
+							<option value="Express">Express</option>
+					</select>
+				</div>
+				<div class="field">
+					<p>
+						Select your size - 
+				
+					</p>
+					<small></small>
+				
+				
+					<div>
+						<input type="radio" name="size" value="XS" id="xs">
+
+						<label for="XS">XS</label>
+					</div>
+					<div>
+						<input type="radio" name="size" value="S" id="s">
+						<label for="S">S</label>
+					</div>
+					<div>
+						<input type="radio" name="size" value="M" id="m">
+						<label for="M">M</label>
+					</div>
+					</div>
+					<div class="field">
+						<p>Select your favurite colors - </p>
+						<label for="red">
+							<input type="checkbox" id="red" name="color" value="red">Red
+						</label>
+						<label for="blue">
+							<input type="checkbox" id="blue" name="color" value="blue">Blue
+						</label>
+						<label for="pink">
+							<input type="checkbox" id="pink" name="color" value="pink">pink
+						</label>
+						
+						
+					</div>		
+				<div class="field">
+					<button type="submit" class="full">Subscribe</button>
+				</div>
+			</form>
+		</div>
+		<script src="app1.js"></script>
+	</body>
+</html>
+<!--
+	The <form> element has two important attributes: action and method.
+
+The action attribute specifies a URL that will process the form submission. In this example, the action is the /signup URL.
+The method attribute specifies the HTTP method to submit the form with. Usually, the method is either post or get.
+Generally, you use the get method when you want to retrieve data from the server and the post method when you want to change data on the server.
+
+
+Use the <form> element to create an HTML form.
+Use DOM methods such as getElementById() and querySelector() to select a <form> element. The document.forms[index] also returns the form element by a numerical index.
+Use form.elements to access form elements.
+The submit event fires when users click the submit button on the form.
+
+
+-->
