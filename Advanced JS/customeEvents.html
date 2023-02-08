@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="note">JS Custome Events</div>
+
+        <script>
+            function highlight(elem){
+    const bgColor="yellow";
+    elem.style.backgroundColor=bgColor;
+
+    let event = new CustomEvent('highlight',{
+        detail: {
+            backgroundColor:bgColor
+        }
+    });
+
+    elem.dispatchEvent(event);
+
+    }
+
+            let div = document.querySelector('.note');
+
+            function addBorder(elem){
+                elem.style.border="solid 1px red";
+            }
+
+            div.addEventListener('highlight',function(e){
+                addBorder(this);
+            });
+
+            highlight(div);
+        </script>
+        
+    </body>
+    </html>
+
+    <!--
+        customEvent(eventType,options)
+
+
+        dispatch the custome event
+        dispatchEvent()
+    -->
