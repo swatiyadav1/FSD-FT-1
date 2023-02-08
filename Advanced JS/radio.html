@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Select your size - 
+
+    </p>
+
+    <div>
+        <input type="radio" name="size" value="XS" id="xs">
+        <label for="XS">XS</label>
+    </div>
+    <div>
+        <input type="radio" name="size" value="S" id="s">
+        <label for="S">S</label>
+    </div>
+    <div>
+        <input type="radio" name="size" value="M" id="m">
+        <label for="M">M</label>
+    </div>
+    <button  id="btn">Submit</button>
+
+    <p id="demo"></p>
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const p = document.querySelector("#demo");
+        const radioBtns = document.querySelectorAll('input[name="size"]');
+        btn.addEventListener('click',()=>{
+let selectSize
+            for(const radiobtn of radioBtns){
+                if(radiobtn.checked){
+selectSize=radiobtn.value;
+break;
+                }
+            }
+
+            demo.innerText=selectSize?`you selected the value ${selectSize}`:"plz select something";
+           
+        })
+    </script>
+    
+</body>
+</html>

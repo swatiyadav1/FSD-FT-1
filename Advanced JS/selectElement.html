@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="selectList">Frameworks</label>
+        <select id="selectList">
+            <option value="Angular">Angular</option>
+            <option value="Vue">Vue</option>
+            <option value="React">React</option>
+
+              <option value="Ember">Ember</option>
+                <option value="Express">Express</option>
+        </select>
+        <button id="btn">get selected item</button>
+    </form>
+    <script>
+        const btn = document.getElementById("btn");
+        const sb=document.getElementById("selectList");
+
+        btn.onclick=(event)=>{
+            event.preventDefault();
+            alert(sb.value+" "+sb.selectedIndex);
+        }
+    </script>
+    
+</body>
+</html>
