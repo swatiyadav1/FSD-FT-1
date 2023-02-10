@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm">
+        <input type="text" name="fname">
+        <input type="text" name="lname">
+        <input type="button" value="Set Cookie" onclick="setCookieFunc()">
+        <input type="button" value="Get Cookie" onclick="getCookieFunc()">
+    </form>
+
+    <script>
+        function setCookieFunc(){
+            if(document.myForm.fname.value == ""){
+                alert("enter some value");
+                return;
+            }
+
+            cookieVal = document.myForm.fname.value;
+
+            document.cookie="name="+cookieVal;
+            cookieVal1 = document.myForm.lname.value;
+            
+            document.cookie="name1="+cookieVal1;
+            console.log(cookieVal);
+            console.log(cookieVal1);
+        }
+
+        function getCookieFunc(){
+let allCookies=document.cookie;
+console.log(allCookies);
+cookiearray = allCookies.split(';');
+
+for(var i=0;i<cookiearray.length;i++){
+    name=cookiearray[i].split('=')[0];
+    value=cookiearray[i].split("=")[1];
+
+    console.log("key - "+name+" value is - "+value);
+}
+
+        }
+    </script>
+    
+</body>
+</html>
