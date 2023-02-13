@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo">
+        Change content using AJAX
+    </div>
+
+    <button type="button" onclick="loadDoc()">
+        Change content
+    </button>
+
+    <script>
+        function loadDoc(){
+
+            const x= new XMLHttpRequest(); //creation of object
+           /* x.onload=function(){  //callback function -= states what needs to be done when you have the response ready 
+                document.getElementById("demo").innerHTML=this.responseText;  //dom
+            }
+            */
+
+            x.onreadystatechange=function(){
+                if(this.status == 200){
+                    document.getElementById("demo").innerHTML=this.responseText; //response as a string
+                    
+                }
+            }
+
+            //send the rewquest to the server
+            x.open("GET","ingo.txt",true);
+            x.send();
+        }
+    </script>
+    
+</body>
+</html>
+<!--
+
+    AJAX
+
+    asynchronous js and XML
+    not a prog lang
+
+    tech, develop better, faster and interactive web apps
+
+    asynchronous - server csan send/recieve data withoput referesing the page
+
+    how AJAX works - 
+    makes use of browser built in XMLHttpRequest object (API)-
+    request data from server
+    and HTML DOm to dispaly/use that data
+
+
+    AJAX - 
+    reads data from the server -
+    updates the webpage withput refresh
+    sends data to the server
+
+
+XMLHttpRequest()-
+
+
+readyState - status
+
+status
+200
+400
+403
+500
+
+statusText
+
+onreadystatechange
+-->

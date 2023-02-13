@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getLocation()">Get location</button>
+    <p id="demo"></p>
+
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation(){
+            if(navigator.geolocation){
+//navigator.geolocation.getCurrentPosition(show);
+
+navigator.geolocation.watchPosition(show);
+            }
+            else{
+                x.innerHTML="Geolocation not working";
+            }
+        }
+
+        function show(position){
+x.innerHTML="Latitude - "+position.coords.latitude+" Longitude - "+position.coords.longitude;
+        }
+    </script>
+    
+</body>
+</html>
+
+<!--
+    APi
+    application programming interface
+
+    how does the API work?
+
+
+    REST, SOAP
+
+
+    every api it exposes some endpoints
+
+
+    JS DOM - 
+    doucment
+
+    Browser APi
+
+    geolocatiob Api
+
+-->
