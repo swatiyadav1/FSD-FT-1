@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        div{
+            border:1px solid yellow;
+            background-color: red;
+            margin: 5px 2px 2px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">div 1 block</div>
+    <div id="div2">div 2 block</div>
+    <p id="demo">Hello</p>
+
+    <p id="demo2"> this is demo 2 para/ span</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#div1").after('<div style="background-color:pink">DIV 3</div>');
+            $("#div1").before('<div style="background-color:pink">DIV 4</div>');
+            $("#div2").append('<div style="background-color:pink">DIV 4</div>');
+            $("#demo").append(' Swati yadav');
+            $("#demo").prepend(' Hi Everyone, ');
+            $("#demo").remove();
+           // $('<span>This is a span element</span>').replaceAll("#demo2");
+            $("#demo2").wrap("<div></div>");
+        });
+    </script>
+    
+</body>
+</html>
+<!--
+    append()-
+    before()-
+    after()-
+$('selector').after('content');
+
+    prepend()
+    remove()
+    replaceAll()
+    wrap()
+-->

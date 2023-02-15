@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="demo">this is some plain <span>include this span </span>text for checking the two methods</p>
+    <input type="text" id="txt" value="Swati yadav">
+
+    <button id="btn1">text</button>
+    <button id="btn2">html</button>    
+    <button id="btn3">value</button>   
+
+
+    <br>
+    <div id="div1" style="width:200px;height:200px;background-color:yellow;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit ducimus, neque fuga dolores deleniti et dicta assumenda eaque esse at harum voluptatibus a culpa inventore beatae vel, accusamus qui!</p>
+        <p id="pid">ssdasd asd sad sa dsa d</p>
+    </div>
+
+
+    <button id="btn4">removwe the div elements</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert("Text - "+$("#demo").text());
+            });
+            $("#btn2").click(function(){
+                alert("HTML - "+$("#demo").html());
+            });
+            $("#btn3").click(function(){
+                $("#txt").val('arya')
+                alert("value - "+$("#txt").val()+" attribute val - "+$("#txt").attr("type"));
+            });
+            $("#btn4").click(function(){
+                $("div").remove("#div1");
+               
+            });
+        })
+    </script>
+</body>
+</html>
+<!--
+    attr()
+    prop()
+    html()
+    text()
+    val()
+
+    remove - removes the selected element+child elements
+    empty - remove the child element
+
+-->
