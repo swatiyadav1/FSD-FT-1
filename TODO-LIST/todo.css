@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+body{
+    font:normal normal 13px/16px "Open Sans",sans-serif;
+    background:gray;
+
+}
+.container{
+    padding:25px;
+    margin:40px auto;
+    background:rgb(193, 161, 161);
+    border-radius:10px;
+    width:300px;
+}
+form{
+    display:inline-block;
+}
+input{
+    padding:5px 15px;
+}
+#addToList{
+    display:inline-block;
+    background-color: blueviolet;
+    color:beige;
+    border-radius: 5px;
+    text-align:center;
+    margin:20px;
+    padding:5px 15px;
+}
+#addToList:hover{
+    opacity:0.7;
+    cursor:pointer;
+}
+ol{
+    padding:20px;
+
+}
+ol li{
+    padding:5px;
+    color:blueviolet;
+
+}
+li:hover{
+    cursor:pointer;
+}
+.strike{
+    text-decoration: line-through;
+}
